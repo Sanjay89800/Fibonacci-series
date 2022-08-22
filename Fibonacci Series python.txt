@@ -1,0 +1,33 @@
+//Code for create a fibonacci series
+
+num=0
+def fibonacci(num):
+    num=int(input("Enter the number of number's fibonacci series you want to create:"))
+
+    
+    if num==0:
+        fib=[]
+        return fib
+    
+    elif num==1:
+        fib=[0]
+        return fib 
+    elif num==2:
+        fib=[0,1]
+        return fib 
+        
+    else:
+        i=1
+        
+        fib=[0,1]
+        
+        while (i<num-1):
+            
+            
+            fib.append(fib[i]+fib[i-1])
+            i+=1
+        return fib
+            
+
+a=fibonacci(num)
+print(f"Fibonacci Series : ",a)
